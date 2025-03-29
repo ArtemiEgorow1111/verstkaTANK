@@ -1,71 +1,161 @@
 .wrapper {
-    font-family: "League Spartan", sans-serif;
-    font-style: normal;
-    color: #161515;
+    background-color: #181818;
+    min-height: 100%;
+    color: #fff;
+    font-family: 'TT TANK', sans-serif;
     font-weight: 300;
+    font-size: 16px;
+
 }
 
-.welcome {
-    background-color: #f8f8f8;
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.welcome__container {
+.header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.header__container {
     display: flex;
+    /* Расстояние между колонками flex-контейнера */
+    column-gap: 32px;
 }
 
-.offer {
-    padding-top: 104px;
-    max-width: 640px;
+.logo {
+    display: block;
+    width: 54px;
+    height: 70px;
 }
 
-.offer__model {
-    font-size: 24px;
-    line-height: 186%;
-    color: #161515;
-    margin-bottom: 53px;
+.header_logo {}
 
-}
+.logo__img {}
 
-.title {
-    font-weight: 300;
-    font-size: 250px;
-    color: #272727;
-    line-height: 0.9;
-}
-
-.desc {
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 1.55;
-}
-
-.offer__desc {
-    margin-bottom: 61px;
-}
-
-.buy {
-    display: flex;
-
-}
-
-.buy__link {
-    color: white;
-    background-color: #161515;
-    font-size: 32px;
-    padding: 26px 74px;
-    display: inline-block;
-}
-
-.buy__price {
-    /* 
-    Тень 
-    box-shadow: смещение_по_х смещение_по_у размытие растяжение цвет
+/* Блок справа от логотипа */
+.header__content {
+    flex: 1;
+    /* Расшифровка flex:1 
+    
+    Разрешаем элементу растягиваться если в контейнере есть свободное пространство:
+    flex-grow: 1;
+    Разрешаем элементу ужиматься если места в кнотейнере не хватает:
+    flex-shrink: 1;
+    Базовый размер (в нашем случае начальная ширина)
+    flex-basis: 0%;
     */
-    box-shadow: 0 0 28px 0 rgba(214, 214, 214, 0.25);
-    background-color: #fff;
-    font-size: 32px;
-    color: #272727;
-    display: inline-flex;
-    align-items: center;
-    padding: 0px 28px;
 }
+
+.header__top {
+    /* Расположить элементы рядом с друг другом */
+    display: flex;
+    /* Распределить свободное пространство таким образом чтобы крайние элементы прижались к краям контейнера */
+    justify-content: space-between;
+    /* Ширина границы, тип границы (solid- сплошная линия), цвет границы */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Нижний внутрений отступ */
+    padding-bottom: 10px;
+    /* Прижать элементы  по вертикали  к верхнему краю flex - контейнера */
+    align-items: flex-start;
+}
+
+.location {
+    font-weight: 500;
+    font-size: 14px;
+    color: #939697;
+    display: flex;
+    align-items: center;
+}
+
+.location::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    /* Фоновое изоброжение псевдоэлемента (картинка локации) */
+    background-image: url(../img/location.svg);
+    /* Запретить фоновому изображению повторяться */
+    background-repeat: no-repeat;
+    /* Расположить фоновое изображение по центру */
+    background-position: center;
+    /* Установили фоновому изображению такой размер чтобы оно заполнило собой блок с сохранением пропорций */
+    background-size: contain;
+}
+
+.services {
+    display: flex;
+    column-gap: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+}
+
+.services__item {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.services__item::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.services__service::before {
+    background-image: url(../img/service.svg);
+}
+
+.services__test-drive::before {
+    background-image: url(../img/test-drive.svg);
+}
+
+.services__link {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.header__bottom {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title-block {
+    display: flex;
+    align-items: center;
+}
+
+.header__title::after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.title {}
+
+.subtitle {}
+
+.header__contacts {}
+
+.contacts {}
+
+.phone-wrap {}
+
+.phone {}
+
+.phone-wrap__info {}
+
+.btn {}
+
+.btn--call-me {}
