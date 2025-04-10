@@ -5,9 +5,7 @@
     font-family: 'TT TANK', sans-serif;
     font-weight: 300;
     font-size: 16px;
-
 }
-
 
 .container {
     max-width: 1300px;
@@ -31,34 +29,36 @@
     height: 70px;
 }
 
-.header_logo {}
+.header__logo {}
 
 .logo__img {}
 
 /* Блок справа от логотипа */
 .header__content {
     flex: 1;
-    /* Расшифровка flex:1 
-    
+    /* 
+    flex:1 аналогично flex: 1 1 0%;
+
     Разрешаем элементу растягиваться если в контейнере есть свободное пространство:
     flex-grow: 1;
-    Разрешаем элементу ужиматься если места в кнотейнере не хватает:
+    Разрешаем элементу ужиматься если места в контейнере не хватает:
     flex-shrink: 1;
-    Базовый размер (в нашем случае начальная ширина)
+    Базовый размер (в нашем случае начальная ширина):
     flex-basis: 0%;
     */
 }
 
+/* Верхняя часть шапки */
 .header__top {
-    /* Расположить элементы рядом с друг другом */
+    /* Расположить элементы рядом друг с другом */
     display: flex;
-    /* Распределить свободное пространство таким образом чтобы крайние элементы прижались к краям контейнера */
+    /* Распредилить свободное пространство в контейнре поровну. Крайние элементы при этом прижмутся к краям контейнера. */
     justify-content: space-between;
-    /* Ширина границы, тип границы (solid- сплошная линия), цвет границы */
+    /* Ширина границы, тип границы (solid - сплошная линия), цвет границы */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    /* Нижний внутрений отступ */
+    /* Нижний внутренний отступ */
     padding-bottom: 10px;
-    /* Прижать элементы  по вертикали  к верхнему краю flex - контейнера */
+    /* Прижать элементы по вертикали к верхнему краю flex - контейнера */
     align-items: flex-start;
 }
 
@@ -68,6 +68,7 @@
     color: #939697;
     display: flex;
     align-items: center;
+    column-gap: 6px;
 }
 
 .location::before {
@@ -75,11 +76,11 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    /* Фоновое изоброжение псевдоэлемента (картинка локации) */
-    background-image: url(../img/location.svg);
+    /* Фоновое изображение псевдоэлемента (картинка локации) */
+    background-image: url(../images/icons/location.svg);
     /* Запретить фоновому изображению повторяться */
     background-repeat: no-repeat;
-    /* Расположить фоновое изображение по центру */
+    /* Расположить фоновое изображение по центру блока */
     background-position: center;
     /* Установили фоновому изображению такой размер чтобы оно заполнило собой блок с сохранением пропорций */
     background-size: contain;
@@ -88,8 +89,6 @@
 .services {
     display: flex;
     column-gap: 40px;
-    font-weight: 500;
-    font-size: 14px;
     letter-spacing: 0.07em;
 }
 
@@ -110,11 +109,11 @@
 }
 
 .services__service::before {
-    background-image: url(../img/service.svg);
+    background-image: url(../images/icons/service.svg);
 }
 
 .services__test-drive::before {
-    background-image: url(../img/test-drive.svg);
+    background-image: url(../images/icons/test-drive.svg);
 }
 
 .services__link {
@@ -134,11 +133,17 @@
     align-items: center;
 }
 
+.header__title {
+    display: flex;
+    align-items: center;
+}
+
 .header__title::after {
     content: "";
-    display: block;
+    display: inline-block;
     height: 30px;
     width: 1px;
+    margin: 0px 20px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -146,16 +151,69 @@
 
 .subtitle {}
 
-.header__contacts {}
+.contacts {
+    display: flex;
+    column-gap: 40px;
+}
 
-.contacts {}
+.header__contacts {}
 
 .phone-wrap {}
 
-.phone {}
+.phone {
+    font-weight: 500;
+    font-size: 20px;
+}
 
-.phone-wrap__info {}
+.phone-wrap__info {
+    font-size: 14px;
+    color: #939697;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 4px;
+}
+
+.phone-wrap__info::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #00d154;
+    border-radius: 50%;
+}
+
+.welcome {
+    min-height: 700px;
+    background-image: url(../images/welcome_bg.jpg);
+    background-size: cover;
+    background-position: left center;
+    padding: 179px;
+}
+
+.welcome__container {}
+
+.welcome__content {}
+
+.welcome__title-wrap {
+    margin-bottom: 40px;
+}
+
+.welcome__supertitle,
+.welcome__subtitle {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.welcome__title {
+    font-weight: 700;
+    font-size: 60px;
+    /* Верхний регистр (Все буквы большие) */
+    text-transform: uppercase;
+    margin: 11px 0px;
+}
+
 
 .btn {}
 
-.btn--call-me {}
+.btn--size--high {}
