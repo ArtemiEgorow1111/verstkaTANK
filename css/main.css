@@ -189,6 +189,7 @@
     background-size: cover;
     background-position: left center;
     padding: 179px;
+    margin-bottom: 20px;
 }
 
 .welcome__container {}
@@ -217,3 +218,142 @@
 .btn {}
 
 .btn--size--high {}
+
+/* Спецпредложение */
+.promo {
+    margin-bottom: 60px;
+}
+
+.container {}
+
+.promo__content {
+    background: #252c2c;
+    border-radius: 10px;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 110%;
+    text-transform: uppercase;
+    max-width: 318px;
+}
+
+.promo__timer {
+    display: flex;
+    column-gap: 30px;
+}
+
+.promo__timer-item {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 4px solid #ff9549;
+    border-radius: 50%;
+    position: relative;
+}
+
+.promo__timer-item:not(:last-child)::after {
+    content: ":";
+    font-weight: 700;
+    font-size: 39px;
+    display: inline-block;
+    position: absolute;
+    right: -24px;
+}
+
+.promo__timer-value {
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+}
+
+.promo__timer-label {
+    font-size: 12px;
+    text-align: center;
+}
+
+.promo__btn-wrap {}
+
+.btn {}
+
+.btn--size--high {}
+
+/* Преимущества */
+.benefits {}
+
+.benefits__list {
+    display: flex;
+    column-gap: 24px;
+}
+
+.benefit__item {
+    padding-left: 44px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 38px;
+    border: 2px solid gray;
+    border-radius: 15px;
+    /* Если у всех элементов установить flex: 1 то они разделят поровну свободное пространство внутри flex-контейнера */
+    flex: 1;
+    min-height: 136px;
+}
+
+.benefit {
+    display: flex;
+    align-items: flex-start;
+}
+
+.benefit__icon {
+    width: 44px;
+    height: 44px;
+    /* Картинка помещается в указанные размеры с сохранением пропорций */
+    object-fit: contain;
+    margin-right: 40px;
+}
+
+.benefits__text {
+    max-width: 312px;
+}
+
+.benefit__title {
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+.benefit__desc {
+    line-height: 120%;
+}
+
+/* booking-promo */
+.booking-promo {
+    margin-top: 100px;
+}
+
+.booking-promo__text {}
+
+.booking-promo__title {
+
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 110%;
+    font-weight: 700px;
+}
+
+.booking-promo__desc {
+    margin-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+}

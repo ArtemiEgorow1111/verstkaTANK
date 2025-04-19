@@ -7,10 +7,23 @@
     color: #181818;
 }
 
+
+
 .btn span {
     display: flex;
     align-items: center;
     column-gap: 10px;
+}
+
+.btn span:after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #181818;
+    border-right: 2px solid #181818;
+    transform: rotate(45deg);
+    border-radius: 1px;
 }
 
 .btn--size--high {
@@ -33,4 +46,8 @@
     background-image: url("../images/icons/phone.svg");
     background-position: center;
     background-size: contain;
+}
+
+.btn--call-me span::after {
+    display: none;
 }
