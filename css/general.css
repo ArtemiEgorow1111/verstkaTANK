@@ -12,6 +12,7 @@
 .btn span {
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 10px;
 }
 

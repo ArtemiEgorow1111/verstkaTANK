@@ -357,3 +357,212 @@
     padding-bottom: 60px;
     text-align: center;
 }
+
+/* Секция специальные предложения */
+.special-offer {
+    padding: 80px 0;
+}
+
+.special-offer__container {}
+
+.special-offer-main {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.special-offer__main-content {
+    max-width: 417px;
+}
+
+.special-offer__bage {
+    font-weight: 500;
+    font-size: 20px;
+    color: #ff9549;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.special-offer__title {
+    font-weight: 700px;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 12px 0;
+
+}
+
+.special-offer__highlight {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.special-offer__disclaimer {
+    border-radius: 10px;
+    padding: 6px 10px;
+    background-color: #FF2B00;
+    display: inline-flex;
+    /* Расстояние между колонками flex-контейнера */
+    column-gap: 8px;
+    margin-bottom: 40px;
+}
+
+.special-offer__disclaimer::before,
+.special-offer__disclaimer::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('../images/icons/Vector.svg');
+    background-size: contain;
+    background-position: center;
+}
+
+.special-offer__btns {
+    display: flex;
+    /* Сменить направление главной оси */
+    flex-direction: column;
+    /* Расстояние между строками flex-контейнера */
+    row-gap: 10px;
+}
+
+.special-offer__banner {
+    display: flex;
+}
+
+.special-offer__img-wrap {
+    max-width: 802px;
+    position: relative;
+}
+
+.special-offer__img {}
+
+.special-offer__banner-limit {
+    border-radius: 8px;
+    padding: 6px 14px;
+    width: 140px;
+    min-height: 66px;
+    background-color: #ff9549;
+    position: absolute;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110%;
+    text-align: center;
+    color: #181818;
+    top: 24px;
+    right: 52px;
+    transform: rotate(15deg);
+
+}
+
+.switch-color-car {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+/* Всем label внутри блока switch-color-car задать относительное позиционирование */
+.switch-color-car label {
+    position: relative;
+}
+
+.color-car-check {
+    position: absolute;
+    top: 0;
+    left: -99999999px;
+}
+
+.color-car-circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Если переключатель находиться в состояние checked то стоящий сразу после него сосед стилизуется следущим образом */
+.color-car-check:checked+.color-car-circle {
+    background-image: url(../images/icons/check-color.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.special-offer__benefits {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+    margin-bottom: 30px;
+}
+
+.special-offer__benefit {
+    border-radius: 10px;
+    background-color: #181818;
+    flex: 1;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+
+.special-offer__benefit-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.special-offer__benefit span {
+    max-width: 173px;
+}
+
+.special-offer__gallery {}
+
+.special-offer__gallery-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+}
+
+.special-offer__gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 240px;
+    height: 200px;
+}
+
+.special-offer__gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Секция trade-in */
+.trade-in-offer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.trade-in-offer__img-wrap {}
+
+.trade-in-offer__img {
+    width: 636px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.trade-in-offer__text {}
+
+.trade-in-offer__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+.trade-in-offer__btns {}
