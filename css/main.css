@@ -5,6 +5,7 @@
     font-family: 'TT TANK', sans-serif;
     font-weight: 300;
     font-size: 16px;
+    overflow: hidden;
 }
 
 .container {
@@ -17,6 +18,10 @@
     padding-bottom: 20px;
 }
 
+.header__content-mobile {
+    display: none;
+}
+
 .header__container {
     display: flex;
     /* Расстояние между колонками flex-контейнера */
@@ -27,6 +32,7 @@
     display: block;
     width: 54px;
     height: 70px;
+    flex-shrink: 0;
 }
 
 .header__logo {}
@@ -212,6 +218,10 @@
     /* Верхний регистр (Все буквы большие) */
     text-transform: uppercase;
     margin: 11px 0px;
+}
+
+.welcome__image {
+    display: none;
 }
 
 
