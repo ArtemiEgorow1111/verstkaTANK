@@ -550,13 +550,22 @@
 }
 
 /* Секция trade-in */
+.trade-in__container {
+    display: flex;
+    column-gap: 40px;
+    padding-bottom: 80px;
+}
+
 .trade-in-offer {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+
 }
 
-.trade-in-offer__img-wrap {}
+.trade-in-offer__img-wrap {
+    flex: 1;
+}
 
 .trade-in-offer__img {
     width: 636px;
@@ -564,7 +573,11 @@
     border-radius: 10px;
 }
 
-.trade-in-offer__text {}
+.trade-in-offer__text {
+    flex: 1;
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
 
 .trade-in-offer__title {
     font-weight: 400;
@@ -575,4 +588,78 @@
 
 }
 
-.trade-in-offer__btns {}
+.trade-in-offer__btns {
+    padding-top: 40px;
+}
+
+.credit-offer {
+    min-height: 400px;
+    background-image: url(../images/image\ 281.png);
+}
+
+.credit-offer__container {
+    padding-top: 82px;
+    padding-left: 66px;
+    padding-bottom: 53px;
+}
+
+.credit-offer__text {}
+
+.credit-offer__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+    padding-bottom: 14px;
+}
+
+.credit-offer__desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    padding-bottom: 40px;
+}
+
+.credit-offer__tel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    color: #939697;
+    padding-bottom: 8px;
+}
+
+.credit-offer__forms {
+    display: flex;
+    column-gap: 24px;
+}
+
+.credit-offer__form {
+    border-radius: 8px;
+    padding: 14px 20px;
+    width: 300px;
+    height: 52px;
+    background-color: #252C2C;
+    border: 1px solid #939697;
+    color: white;
+}
+
+.credit-offer__agreement {
+    display: flex;
+    column-gap: 6px;
+    padding-top: 14px;
+}
+
+.credit-offer__btn {
+    accent-color: #252C2C;
+    width: 14px;
+    height: 14px;
+    border-radius: 8px;
+    border: solid 1px #939697;
+}
+
+.credit-offer-agreement__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    color: white;
+}
